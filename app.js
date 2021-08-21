@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const User=require('./models/user');
 const bodyParser = require('body-parser');
 
-
+const port=process.env.port||3001;
 // create application/json parser
 const jsonParser = bodyParser.json()
  
@@ -25,7 +25,7 @@ app.all("/*", function(req, res, next){
   });
   
 
-app.listen(3001, () => {
+app.listen(port, () => {
     console.log('App running at 3001')
 })
 
