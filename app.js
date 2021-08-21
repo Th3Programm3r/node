@@ -29,6 +29,10 @@ app.listen(port, () => {
     console.log('App running at 3001')
 })
 
+app.get('/',(req,res)=>{
+    res.send("Welcome to the jamrock.");
+});
+
 app.post('/authenticate', jsonParser,(req, res) => {
     const username=req.body.username;
     const password=req.body.password;
